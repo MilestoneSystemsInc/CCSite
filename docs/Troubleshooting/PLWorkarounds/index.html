@@ -1924,21 +1924,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ccure-9000-version-290-sp6-and-personalized-login" class="md-nav__link">
+  <a href="#ccure-9000-version-290-sp6-or-3001-and-personalized-login" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CCure 9000 Version 2.90 SP6 and personalized login.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ccure-9000-version-3001-and-personalized-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CCure 9000 Version 3.00.1 and personalized login.
+        CCure 9000 Version 2.90 SP6 or 3.00.1 and personalized login.
       
     </span>
   </a>
@@ -2213,13 +2202,9 @@
 <h1 id="personalized-login-workarounds-for-integration-version-14">Personalized login workarounds for integration version 1.4<a class="headerlink" href="#personalized-login-workarounds-for-integration-version-14" title="Permanent link">&para;</a></h1>
 <p>Milestone and Software House have committed to maintain compatibility between all possible versions of the XProtect and CCure 9000 systems. This commitment has made it possible to install and integrate between all versions of the integrations which are posted at this <a href="https://download.milestonesys.com/ccure9kxpa/CCure9000-XProtect-Access-Compatibility.pdf">link</a>.</p>
 <p>Below is a list of available workarounds required to maintain compatibility in the following combinations of software versions and feature support.</p>
-<h2 id="ccure-9000-version-290-sp6-and-personalized-login">CCure 9000 Version 2.90 SP6 and personalized login.<a class="headerlink" href="#ccure-9000-version-290-sp6-and-personalized-login" title="Permanent link">&para;</a></h2>
+<h2 id="ccure-9000-version-290-sp6-or-3001-and-personalized-login">CCure 9000 Version 2.90 SP6 or 3.00.1 and personalized login.<a class="headerlink" href="#ccure-9000-version-290-sp6-or-3001-and-personalized-login" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="./#configure-iis-process-private-memory-limit">Change victorwebservice IIS Process Private Memory Limit (KB) to 0</a>.</li>
-<li><a href="./#configure-iis-process-regular-time-interval">Change victorwebservice IIS Process Regular Time Interval (minutes) to 60-540</a>.</li>
-</ul>
-<h2 id="ccure-9000-version-3001-and-personalized-login">CCure 9000 Version 3.00.1 and personalized login.<a class="headerlink" href="#ccure-9000-version-3001-and-personalized-login" title="Permanent link">&para;</a></h2>
-<ul>
 <li><a href="./#configure-iis-process-regular-time-interval">Change victorwebservice IIS Process Regular Time Interval (minutes) to 60-540</a>.</li>
 </ul>
 <div class="admonition glass">
@@ -2242,7 +2227,7 @@
 <p>The default value of 1740 minutes means that the app pool only recycles, or restarts, once every 29 hours. Milestone recommends lowering the value to something that allows predictable performance expectations for the customer. In some scenarios with large systems this might be a very low value (60) in other systems, it might only need to be at the end of each shift (540).</p>
 </div>
 <h2 id="configure-iis-process-private-memory-limit">Configure IIS Process Private Memory Limit<a class="headerlink" href="#configure-iis-process-private-memory-limit" title="Permanent link">&para;</a></h2>
-<p>On CCure 9000 version 2.90SP6 the IIS process creates a memory leak when the personalized login feature is used with XProtect Access. To fix this issue it is recommended to remove the limit of memory the process can utilize. Below is the procedure for making this change:</p>
+<p>On CCure 9000 version 2.90 SP6 and 3.00.1 the IIS process creates a memory leak when the personalized login feature is used with XProtect Access. To fix this issue it is recommended to remove the limit of memory the process can utilize. Below is the procedure for making this change:</p>
 <ol>
 <li>On the CCure 9000 server, search for and open the <strong>Internet Information Services (IIS) Manager</strong> app.</li>
 <li>Expand the host server node in the <strong>Connections</strong> directory and select the <strong>Application Pools</strong> menu.</li>
