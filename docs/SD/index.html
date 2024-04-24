@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://www.MySite.local/SD/">
       
       
-        <link rel="prev" href="../Intro/Limits/">
+        <link rel="prev" href="../Intro/SSO/">
       
       
         <link rel="next" href="Partitions/">
@@ -418,13 +418,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Intro/SSO/" class="md-nav__link">
+      <a href="../Intro/Limits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    XProtect Access and SSO authentication (explained)
+    Scalablity and compatibility limits
   
 
     
@@ -444,13 +444,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Intro/Limits/" class="md-nav__link">
+      <a href="../Intro/SSO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Scalablity and compatibility limits
+    XProtect Access and SSO authentication (explained)
   
 
     
@@ -1024,13 +1024,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Encrypt/EventServer/" class="md-nav__link">
+      <a href="../Encrypt/VWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Encrypting communication between the XProtect Access service and the XProtect Event Server
+    Encrypting communication between the XProtect Access service and the victor web service
   
 
     
@@ -1050,13 +1050,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../Encrypt/VWS/" class="md-nav__link">
+      <a href="../Encrypt/EventServer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Encrypting communication between the XProtect Access service and the victor web service
+    Encrypting communication between the XProtect Access service and the XProtect Event Server
   
 
     
@@ -2152,8 +2152,8 @@
     F &lt;==&gt;|XPA| J(CCure SAS #4):::XPClass
     linkStyle 9,10,11,12 stroke:#0f0,stroke-width:4px
     classDef XPClass fill:#efb, stroke:#000, stroke-width:2px</code></pre>
-<details class="warning">
-<summary>Unsupported MAS/SAS connection options</summary>
+<div class="admonition warning">
+<p class="admonition-title">Unsupported MAS/SAS connection options</p>
 <p>CCure 9000 Enterprise scenarios require that each CCure 9000 Satellite Application Server (SAS) installation has a maximum of one corresponding Federated XProtect site that connects to it. Each XProtect site, for performance reasons, should never have more than one CCure 9000 Satellite Application Server (SAS) connected. CCure 9000 Enterprise scenarios also require that no connection is directly made to a Master Application Server (MAS).</p>
 <p><strong>MAS-DIRECT NOT SUPPORTED</strong></p>
 <p><pre class="mermaid"><code>flowchart LR
@@ -2171,7 +2171,7 @@
 
     linkStyle default stroke:#0f0,stroke-width:4px
     classDef XPClass fill:#f57, stroke:#000, stroke-width:2px</code></pre>
-</details>
+</div>
 
 
 

@@ -418,13 +418,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intro/SSO/" class="md-nav__link">
+      <a href="../../Intro/Limits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    XProtect Access and SSO authentication (explained)
+    Scalablity and compatibility limits
   
 
     
@@ -444,13 +444,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intro/Limits/" class="md-nav__link">
+      <a href="../../Intro/SSO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Scalablity and compatibility limits
+    XProtect Access and SSO authentication (explained)
   
 
     
@@ -1024,13 +1024,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Encrypt/EventServer/" class="md-nav__link">
+      <a href="../../Encrypt/VWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Encrypting communication between the XProtect Access service and the XProtect Event Server
+    Encrypting communication between the XProtect Access service and the victor web service
   
 
     
@@ -1050,13 +1050,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Encrypt/VWS/" class="md-nav__link">
+      <a href="../../Encrypt/EventServer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Encrypting communication between the XProtect Access service and the victor web service
+    Encrypting communication between the XProtect Access service and the XProtect Event Server
   
 
     
@@ -2131,21 +2131,22 @@
 
 
 <h1 id="mip-plugin-upgrades">MIP Plugin upgrades<a class="headerlink" href="#mip-plugin-upgrades" title="Permanent link">&para;</a></h1>
-<details class="warning">
-<summary>CCure 9000 Upgrades?</summary>
-<p>The most recent compatible CCure 9000 software version requires a different license (web service API license) compared to all previous versions (which required an SDK license). This version is:</br></p>
+<div class="admonition warning">
+<p class="admonition-title">CCure 9000 Upgrades?</p>
+<p>Recent CCure 9000 software versions requires a different type of license (web service API license) compared to all previous versions (which required an SDK license). These versions are:</br></p>
 <ul>
 <li>3.00.1</li>
+<li>3.00.2</li>
 </ul>
 <p>In an existing integrated system, running an older version of the integration (1.3 or below), it is required to first upgrade the integration to the current version (1.4), before upgrading the CCure software. Older versions of the integration are not compatible with the new web service license type.</p>
-</details>
+</div>
 <p>Always upgrade both the CCure 9000 integration components on the CCure 9000 machine, and the MipPlugin software on the XProtect server. Milestone distributes all component installers with each CCure 9000 XProtect Access integration release. Simply run the installer program on both the CCure 9000 server and the XProtect server; it will upgrade any installed software.</p>
 <p>Automatic MipPlugin upgrades of configured and installed instances in the Management Client are also supported for all versions of the CCure 9000 XProtect Access integration.</p>
-<details class="warning">
-<summary>Preserve the old installation directory</summary>
+<div class="admonition warning">
+<p class="admonition-title">Preserve the old installation directory</p>
 <p>When upgrading to version 1.3 or 1.4 or higher of the integration, from all versions prior to 1.3, it is required that the file directories where the integration files from the old version were stored are not deleted, before or after the integration is upgraded. Below is the directory for the old integration files:</p>
 <p><code>C:\ProgramData\VideoOS\ACMServers</code></p>
-</details>
+</div>
 <p>After upgrading the integration, any previous versions of the XProtect Access instance in the XProtect Management Client will have the <strong>[Legacy]</strong> label added to it. This simply identifies an upgraded XProtect Access instance.</p>
 <p><img alt="Legacy" src="../img/CX.legacy.png" /></p>
 <p>Any new XProtect Access instances which are added to the same XProtect system have the option to choose between the new version and the <strong>[Legacy]</strong> version during the instance creation wizard. New instances should always choose the version which is labled:</p>

@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://www.MySite.local/Encrypt/VWS/">
       
       
-        <link rel="prev" href="../EventServer/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../MCConfig/">
+        <link rel="next" href="../EventServer/">
       
       
         
@@ -418,13 +418,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intro/SSO/" class="md-nav__link">
+      <a href="../../Intro/Limits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    XProtect Access and SSO authentication (explained)
+    Scalablity and compatibility limits
   
 
     
@@ -444,13 +444,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intro/Limits/" class="md-nav__link">
+      <a href="../../Intro/SSO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Scalablity and compatibility limits
+    XProtect Access and SSO authentication (explained)
   
 
     
@@ -1012,32 +1012,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../EventServer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Encrypting communication between the XProtect Access service and the XProtect Event Server
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1065,6 +1039,32 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EventServer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Encrypting communication between the XProtect Access service and the XProtect Event Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2132,10 +2132,10 @@
 
 <h1 id="encrypting-communication-between-the-xprotect-access-service-and-the-victor-web-service">Encrypting communication between the XProtect Access service and the victor web service<a class="headerlink" href="#encrypting-communication-between-the-xprotect-access-service-and-the-victor-web-service" title="Permanent link">&para;</a></h1>
 <p>In the current version of the XProtect Access CCure 9000 integration it's possible to encrypt communications between the CCure XProtect Access Service and the victor web service. To do so, install a root certificate on the server that hosts the CCure XProtect Access Service and configure the victor web service to use the certificate. Below are the steps required to install the root certificate and configure the victor web service.</p>
-<details class="warning">
-<summary>3<sup>rd</sup> party certificates</summary>
+<div class="admonition warning">
+<p class="admonition-title">3<sup>rd</sup> party certificates</p>
 <p>The fully detailed process included here is for self-signed certificates. If you are using a third party certificate, from a commercial certificate provider, please skip ahead to step number ten below. Refer to the <a href="https://doc.milestonesys.com/latest/en-US/portal/htm/chapter-page-certificates-guide.htm">XProtect Certificate Guide</a> for any questions on dealing with certificates.</p>
-</details>
+</div>
 <ol>
 <li>On a server with restricted access, open PowerShell and run the script below, to create a CA certificate.</br>
     <div class="highlight"><span class="filename">PowerShell</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Run this script once, to create a certificate that can sign multiple server SSL certificates</span>
@@ -2214,7 +2214,7 @@
     </br>
     <img alt="Import_ssl_cert" src="../img/CX.sslimport1.png" /></br></li>
 <li>Import the certificate into the store of the local machine. Choose the certificate file that you copied to the local server. Enter the password chosen during the script. Browse to the personal folder of the certificate store to choose that as the location for the certificate. Complete the import wizard.</li>
-<li>The final step in this process involves binding the certificate to the IIS server supporting the victor web service. In the <strong>IIS Manager</strong> application on the victor web service host server, open the Bindings... menu of the <strong>Default Web Site</strong>.</br>
+<li>The final step in this process involves binding the certificate to the IIS server supporting the victor web service. In the <strong>IIS Manager</strong> application on the victor web service host server, open the <strong>Bindings...</strong> menu of the <strong>Default Web Site</strong>.</br>
     </br>
     <img alt="vws_iis_bindings" src="../img/CX.vwsIISbind.png" /></br></li>
 <li>Choose to edit the https binding, select the imported certificate from the <strong>SSL certificate</strong> list, click <strong>OK</strong> and close the <strong>Site Bindings</strong> menu.</br>
@@ -2222,10 +2222,10 @@
     <img alt="binding_443" src="../img/CX.edit443binding.png" /></br></li>
 <li>Now the solution is ready for secure communications between the CCure XProtect Access Service and the victor web service.</li>
 </ol>
-<details class="abstract">
-<summary>Learn more</summary>
+<div class="admonition abstract">
+<p class="admonition-title">Learn more</p>
 <p>For more information about configuring the CCure 9000 system and the victor web service for secure communications refer to the victor Web Service User Guide available from Johnson Controls.</p>
-</details>
+</div>
 
 
 
